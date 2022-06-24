@@ -14,6 +14,7 @@ class Solution:
         root.left = root.right
         root.right = tmp
         
+        #Invert the sub-tree using recursion 
         self.invertTree(root.left)
         self.invertTree(root.right)
         
