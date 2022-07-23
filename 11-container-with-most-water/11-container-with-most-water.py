@@ -1,6 +1,6 @@
 class Solution:
     def maxArea(self, height: List[int]) -> int:
-        #Brute force
+        #Brute force T-O(n^2), S-O(1)
         '''maxarea = 0
         for left in range(len(height)):
             for right in range(left + 1, len(height)):
@@ -9,7 +9,7 @@ class Solution:
 
         return maxarea
         '''
-        #Two pointer approach
+        #Two pointer approach T-O(n), S-O(1)
         maxarea = 0
         left = 0
         right = len(height) - 1
