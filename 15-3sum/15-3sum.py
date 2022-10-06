@@ -1,6 +1,6 @@
 class Solution:
         #two pointer approach
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
+     def threeSum(self, nums: List[int]) -> List[List[int]]:
         res = []
         nums.sort()
 
@@ -21,7 +21,7 @@ class Solution:
                     while nums[l] == nums[l - 1] and l < r: # to make sure the left pointer bypasses duplicate consecutive values and left and right pointer dont meet
                         l += 1
         return res
-    '''     
+        '''     
         # hashset approach
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         res = []
