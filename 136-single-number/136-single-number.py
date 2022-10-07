@@ -1,12 +1,3 @@
-'''class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-        no_duplicate_list = []
-        for i in nums:
-            if i not in no_duplicate_list:
-                no_duplicate_list.append(i)
-            else:
-                no_duplicate_list.remove(i)
-        return no_duplicate_list.pop()'''
     
 from collections import defaultdict
 class Solution:
@@ -18,3 +9,9 @@ class Solution:
         for i in hash_table:
             if hash_table[i] == 1:
                 return i
+            
+    # Bit manipulation solution
+        res = 0
+            for num in nums:
+                res = res ^ num #XOR of same number results in 0 and the remaining number will be the single number
+            return res
