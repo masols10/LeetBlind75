@@ -22,6 +22,8 @@ class LRUCache:
         return
 
     # using an ordered dict
+    # Time complexity : O(1) both for put and get since all operations with ordered dictionary
+    #Space complexity : O(capacity) since the space is used only for an ordered dictionary with at most capacity + 1 elements
     def __init__(self, capacity: int):
         self.capacity = capacity
         self.cache = collections.OrderedDict()
